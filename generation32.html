@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Generation | Every Pack Dynasty Legacy</title><style>
+:root{
+ --bg:#f5f3ef;--paper:#fffdfa;--ink:#222;--muted:#6a6762;--line:#ddd6cc;
+ --accent:#2da66f;--accent2:#7d4ed8;--soft:#ece8e2;--gold:#bd9565;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55}
+a{color:inherit} .shell{width:min(1180px,calc(100% - 28px));margin:auto}
+.topbar{position:sticky;top:0;z-index:20;background:rgba(255,253,250,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900}.plumbob{width:22px;height:30px;background:var(--accent);clip-path:polygon(50% 0,100% 42%,50% 100%,0 42%)}
+.navlinks{display:flex;gap:16px;flex-wrap:wrap}.navlinks a{text-decoration:none;font-weight:700;color:var(--muted)}
+.hero{padding:74px 0 54px;background:
+radial-gradient(circle at 15% 10%,rgba(45,166,111,.16),transparent 25%),
+radial-gradient(circle at 80% 15%,rgba(125,78,216,.13),transparent 25%),
+linear-gradient(180deg,#fbfaf7,var(--bg))}
+.hero-grid{display:grid;grid-template-columns:1.3fr .8fr;gap:42px;align-items:center}
+.kicker{font-weight:900;letter-spacing:.16em;text-transform:uppercase;font-size:.76rem;color:var(--accent2)}
+h1{font-size:clamp(3rem,7vw,6.8rem);line-height:.92;margin:.18em 0 .2em;font-family:Georgia,serif}
+.lede{font-size:1.18rem;color:var(--muted);max-width:760px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.btn,.small-btn{display:inline-block;text-decoration:none;border-radius:999px;padding:12px 17px;background:var(--accent);color:white;font-weight:900;border:1px solid var(--accent)}
+.btn.alt{background:white;color:var(--accent);border-color:var(--line)} .small-btn{padding:9px 13px;font-size:.88rem}
+.hero-card{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:26px;box-shadow:0 18px 50px rgba(0,0,0,.07)}
+.statgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.stat{padding:16px;background:var(--soft);border-radius:16px}.stat b{font-size:1.5rem;display:block}
+.section{padding:56px 0}.section h2{font-family:Georgia,serif;font-size:clamp(2rem,4vw,3.6rem);margin:0 0 14px}.sub{color:var(--muted);max-width:780px}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}.search{flex:1;min-width:220px;border:1px solid var(--line);border-radius:999px;padding:12px 16px;font-size:1rem}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.gen-card{background:var(--paper);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 10px 26px rgba(0,0,0,.05)}
+.gen-art{height:130px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(45,166,111,.16),rgba(125,78,216,.15))}
+.gen-art span{width:74px;height:94px;background:var(--accent);color:#fff;display:grid;place-items:center;font-size:2rem;font-weight:900;clip-path:polygon(50% 0,100% 42%,50% 100%,0 42%)}
+.gen-meta{padding:18px}.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;font-weight:900;color:var(--gold)}.gen-meta h3{font-size:1.35rem;margin:.35em 0}
+.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.info{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:20px}
+.randomizer{background:linear-gradient(135deg,#ffffff,#f0ece7);border:1px solid var(--line);border-radius:22px;padding:24px}.randomizer-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:14px}
+.roll{background:white;border:1px solid var(--line);border-radius:14px;padding:14px}.roll b{display:block;color:var(--accent2);font-size:.78rem;text-transform:uppercase;letter-spacing:.08em}.roll span{display:block;margin-top:5px;font-weight:800}
+.footer{padding:40px 0 60px;color:var(--muted);text-align:center}
+.content-wrap{width:min(900px,calc(100% - 28px));margin:42px auto 80px;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:34px;box-shadow:0 12px 34px rgba(0,0,0,.06)}
+.content-wrap h1{font-size:clamp(2.5rem,6vw,5rem)} .content-wrap h2{font-family:Georgia,serif;font-size:2rem;margin-top:34px}.content-wrap h3{margin-top:28px;color:var(--accent2)}
+.pill{display:inline-block;background:var(--accent2);color:#fff;border-radius:999px;padding:7px 12px;font-weight:900;margin:6px 0 18px}
+.task{display:flex;gap:10px;align-items:flex-start;margin:10px 0;padding:10px 12px;background:#faf8f4;border:1px solid #eee7dc;border-radius:12px}.task input{margin-top:5px;transform:scale(1.1)}
+.progressbar{height:12px;background:#e7e2da;border-radius:999px;overflow:hidden}.progressbar>div{height:100%;width:0;background:var(--accent)}
+.progressline{display:flex;justify-content:space-between;gap:20px;align-items:center;margin:16px 0}
+.backrow{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:18px 0 30px}
+@media(max-width:900px){.hero-grid,.cards,.info-grid{grid-template-columns:1fr 1fr}.hero-grid{grid-template-columns:1fr}}
+@media(max-width:620px){.cards,.info-grid,.randomizer-grid{grid-template-columns:1fr}.navlinks{display:none}.content-wrap{padding:22px}}
+</style></head><body>
+<div class="topbar"><div class="shell nav"><a class="brand" href="index.html"><span class="plumbob"></span> Every Pack Dynasty</a><div class="navlinks"><a href="index.html#generations">All Generations</a><a href="index.html#before-you-begin">Before You Begin</a></div></div></div>
+<main class="content-wrap">
+<div class="backrow"><a class="btn alt" href="index.html#generations">← All Generations</a><div><a class="btn alt" href="generation.html?g=31&v=4">Previous</a></div></div>
+<div class="eyebrow">Generation 32 of 32</div><h1>Adventure Awaits</h1>
+<div class="progressline"><strong>Your progress</strong><span id="progressText">0%</span></div><div class="progressbar"><div id="bar"></div></div>
+<div id="content"><div class="pill">The Great Legacy Getaway</div>
+<p>The family has survived wilderness, careers, fame, magic, scandal, nobility, death, reinvention, and thirty-one generations of change. The final heir decides the Dynasty should not end as a museum piece. They create a place where descendants can keep making memories. Generation 32 is about adventure, play, childhood, and turning the family legacy into a tradition that can continue long after the challenge ends.</p>
+<h3>Starting Setup</h3>
+<label class="task"><input type="checkbox"><span>Move the heir to Gibbi Point or establish it as the generation's primary home-away-from-home.</span></label>
+<label class="task"><input type="checkbox"><span>Use the Competitive trait if it fits the heir; otherwise randomize traits that are not required by prior succession rules.</span></label>
+<label class="task"><input type="checkbox"><span>Take no more than §20,000 from the Dynasty for the heir's personal household. The ancestral estate and heirlooms remain intact.</span></label>
+<h3>Explore Gibbi Point</h3>
+<label class="task"><input type="checkbox"><span>Visit all three Gibbi Point neighborhoods: Wanderwood Wilds, Crystal Valley, and Jellyfish Junction.</span></label>
+<label class="task"><input type="checkbox"><span>Experience the major natural sights and local activities, including the geyser area, glowing nighttime scenery, fishing or river activities, and the boardwalk.</span></label>
+<label class="task"><input type="checkbox"><span>Complete at least one local quest and learn something about Gibbi Point's unusual wildlife or mysteries.</span></label>
+<h3>The Getaway System</h3>
+<label class="task"><input type="checkbox"><span>Attend at least three different Getaways. At least one must be family-focused, one active/adventurous, and one chosen purely for the heir's personality.</span></label>
+<label class="task"><input type="checkbox"><span>Create at least one Custom Venue from scratch and use Custom Venue Rules rather than leaving it as a generic destination.</span></label>
+<label class="task"><input type="checkbox"><span>Plan and successfully complete a multi-day Custom Getaway using the Getaway Planner.</span></label>
+<label class="task"><input type="checkbox"><span>Schedule at least one recurring Getaway so the Dynasty gains a tradition that can continue after Generation 32.</span></label>
+<label class="task"><input type="checkbox"><span>Try one competition or elimination-style Getaway. Accept the result without reloading if your heir loses.</span></label>
+<h3>Adventure Skills &amp; Activities</h3>
+<label class="task"><input type="checkbox"><span>Use Archery repeatedly and make it one of the generation's signature activities.</span></label>
+<label class="task"><input type="checkbox"><span>Go kayaking and use at least one of the pack's water or diving activities.</span></label>
+<label class="task"><input type="checkbox"><span>Try Entomology or butterfly-catching gameplay.</span></label>
+<label class="task"><input type="checkbox"><span>Use Papercraft at least once and display one finished piece in the family home or getaway venue.</span></label>
+<label class="task"><input type="checkbox"><span>Use a Modular Playground and at least one waterslide, diving board, Spin Bike, or Free Weight activity.</span></label>
+<h3>Career</h3>
+<label class="task"><input type="checkbox"><span>Join the Park Worker career and choose either the Camp Counselor or Park Ranger branch.</span></label>
+<label class="task"><input type="checkbox"><span>Reach the top of the chosen Park Worker branch before the heir becomes an Elder.</span></label>
+<h3>Childhood Legacy</h3>
+<label class="task"><input type="checkbox"><span>Raise or closely mentor at least one Child Sim during this generation so the expanded childhood systems are central to the story.</span></label>
+<label class="task"><input type="checkbox"><span>Have that child experience multiple Formative Moments and allow their Childhood Sentiments to develop naturally.</span></label>
+<label class="task"><input type="checkbox"><span>Complete or make substantial progress on the Cool Kid on the Block child aspiration with at least one child.</span></label>
+<label class="task"><input type="checkbox"><span>Give a child an Imaginary Friend and build a meaningful relationship with it. Accept the personality you choose or randomize it; do not replace it just because it is inconvenient.</span></label>
+<label class="task"><input type="checkbox"><span>Play Hide-and-Seek and Rock, Paper, Scissors with family or friends.</span></label>
+<h3>The Dynasty's Final Venue</h3>
+<label class="task"><input type="checkbox"><span>Create a permanent Dynasty Getaway venue inspired by the full 32-generation history.</span></label>
+<label class="task"><input type="checkbox"><span>Include at least five references to earlier generations, such as a campfire for Gen 1, photographs for Gen 2, a wellness space for Gen 3, a restaurant/cooking area, magical or occult memorabilia, ranch décor, a noble crest, or other surviving heirlooms.</span></label>
+<label class="task"><input type="checkbox"><span>Display the original Dynasty crest prominently and bring at least one designated heirloom from the ancestral estate.</span></label>
+<label class="task"><input type="checkbox"><span>Host one final multi-household Dynasty Getaway with relatives from as many surviving branches as practical.</span></label>
+<h3>Royalty &amp; Legacy Integration</h3>
+<label class="task"><input type="checkbox"><span>The current Dynasty Head must formally designate the future heir even though the published challenge ends here. The family story is meant to continue beyond the rules.</span></label>
+<label class="task"><input type="checkbox"><span>Take the Generation 32 Head portrait and add it to the ancestral portrait gallery.</span></label>
+<label class="task"><input type="checkbox"><span>If any major Dynasty finale requirement is still unfinished, use this generation to resolve it naturally: reach maximum Prestige, maintain an Alliance, experience a Rivalry and genuine Scandal, create and resolve an Outcast story, establish a branch Dynasty, preserve the original crest, and maintain Nobility somewhere in the main line.</span></label>
+<label class="task"><input type="checkbox"><span>The original Dynasty founded in Generation 1 must still exist at the end of Generation 32.</span></label>
+<h3>Generation Completion Checklist</h3>
+<label class="task"><input type="checkbox"><span>All three Gibbi Point neighborhoods visited.</span></label>
+<label class="task"><input type="checkbox"><span>Three different Getaways experienced.</span></label>
+<label class="task"><input type="checkbox"><span>Custom Venue built and Custom Getaway completed.</span></label>
+<label class="task"><input type="checkbox"><span>A recurring Dynasty Getaway scheduled.</span></label>
+<label class="task"><input type="checkbox"><span>Adventure activities including Archery and water-based gameplay used.</span></label>
+<label class="task"><input type="checkbox"><span>Park Worker career branch completed.</span></label>
+<label class="task"><input type="checkbox"><span>Expanded childhood gameplay and an Imaginary Friend experienced.</span></label>
+<label class="task"><input type="checkbox"><span>Final Dynasty Getaway venue completed with five or more legacy references.</span></label>
+<label class="task"><input type="checkbox"><span>Final multi-household Dynasty Getaway held.</span></label>
+<label class="task"><input type="checkbox"><span>Generation 32 portrait placed and future heir designated.</span></label>
+<label class="task"><input type="checkbox"><span>All global Dynasty finale requirements complete.</span></label>
+<h2>Challenge Finale</h2>
+<p>The challenge is complete when the Dynasty that began with one broke wilderness founder has survived thirty-two generations without dissolving, preserved its history, adapted its values, and created a recurring family Getaway for descendants who come next. The final scene should not feel like the family's story is over: gather the Dynasty at its new legacy venue, take one last group picture, and let the next heir begin making memories of their own.</p></div>
+</main>
+<footer class="footer"><div class="shell">Fan-made challenge for The Sims 4. Not affiliated with or endorsed by Electronic Arts or Maxis.</div></footer>
+<script>
+const key='dynasty-progress-32';const boxes=[...document.querySelectorAll('.task input')];
+let saved=[];try{saved=JSON.parse(localStorage.getItem(key)||'[]')}catch(e){saved=[]}
+boxes.forEach((b,i)=>{b.checked=!!saved[i];b.addEventListener('change',save)});
+function save(){localStorage.setItem(key,JSON.stringify(boxes.map(b=>b.checked)));update()}
+function update(){const done=boxes.filter(b=>b.checked).length,total=boxes.length||1,p=Math.round(done/total*100);document.getElementById('progressText').textContent=p+'%';document.getElementById('bar').style.width=p+'%'}
+update();
+</script></body></html>
