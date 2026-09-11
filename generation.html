@@ -66,8 +66,8 @@ guide=guide.replaceAll('<h3>Dynasty Integration</h3>','<h3>👑 Dynasty Legacy</
            .replaceAll('<h3>Generation Completion Checklist</h3>','<h3>🏆 Generation Completion</h3>');
 document.getElementById('content').innerHTML=guide;
 const prev=document.getElementById('prev'),next=document.getElementById('next');
-prev.href=`generation.html?g=${Math.max(1,g-1)}&v=9`;
-if(g===31){next.href='generation32.html?v=9';}else{next.href=`generation.html?g=${Math.min(TOTAL_GENERATIONS,g+1)}&v=9`;}
+prev.href=`generation.html?g=${Math.max(1,g-1)}&v=11`;
+if(g===31){next.href='generation32.html?v=11';}else{next.href=`generation.html?g=${Math.min(TOTAL_GENERATIONS,g+1)}&v=11`;}
 if(g===1)prev.style.visibility='hidden';if(g===TOTAL_GENERATIONS)next.style.visibility='hidden';
 const key=`dynasty-progress-${g}`;const boxes=[...document.querySelectorAll('.task input')];
 const saved=JSON.parse(localStorage.getItem(key)||'[]');
